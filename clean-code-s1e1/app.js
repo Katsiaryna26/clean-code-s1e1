@@ -18,6 +18,7 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
+    listItem.className="li-cl";
 
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
@@ -33,18 +34,20 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task';
+    label.className="task";
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="input-cl li-input-checkbox"
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="task input-cl input-text li-input-text";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.className="edit button-cl";
 
-    deleteButton.className="delete";
+    deleteButton.className="delete button-cl";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className="button-delete-img"
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -84,7 +87,7 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit");
+    var editBtn=listItem.querySelector(".edit"); 
     var containsClass=listItem.classList.contains("edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
@@ -100,6 +103,9 @@ var editTask=function(){
 
     //toggle .editmode on the parent.
     listItem.classList.toggle("edit-mode");
+    label.classList.toggle("ul-li-edit-mode-label")
+    editInput.classList.toggle("ul-li-edit-mode-input-text")
+
 };
 
 
@@ -121,6 +127,16 @@ var taskCompleted=function(){
 
     //Append the task list item to the #completed-tasks
     var listItem=this.parentNode;
+    var checkBox=listItem.querySelector('input[type=checkbox]');
+    checkBox.type="checkbox";
+    checkBox.className="input-cl li-input-checkbox";
+    
+    var editInput=listItem.querySelector("input[type=text]");
+    editInput.type="text";
+    editInput.className="task input-cl input-text li-input-text"
+    
+    var label=listItem.querySelector("label")
+    label.className="task li-label ul-completed-tasks-label"
     completedTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskIncomplete);
 
@@ -133,8 +149,18 @@ var taskIncomplete=function(){
     //When the checkbox is unchecked
     //Append the task list item to the #incompleteTasks.
     var listItem=this.parentNode;
+    var label=listItem.querySelector("label")
+    label.className="task li-label"
+    var checkBox=listItem.querySelector('input[type=checkbox]');
+    checkBox.type="checkbox";
+    checkBox.className="input-cl li-input-checkbox";
+    
+    var editInput=listItem.querySelector("input[type=text]");
+    editInput.type="text";
+    editInput.className="task input-cl input-text li-input-text"
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem,taskCompleted);
+
 }
 
 
