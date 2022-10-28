@@ -5,7 +5,7 @@
   font-family: lato, sans-serif;
 }
 
-.top-page {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
@@ -16,14 +16,14 @@
   width: 100%;
 }
 
-.top-page, 
+.header, 
 .more-inf {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .top-page {
+  .header {
     text-align: center;
   }
 
