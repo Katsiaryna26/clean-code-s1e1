@@ -16,7 +16,8 @@
   width: 100%;
 }
 
-.top-page .more-inf {
+.top-page, 
+.more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -49,11 +50,13 @@
   padding: 0px;
 }
 
-.li-cl, .h3 {
+.li-cl,
+.h3 {
   list-style:none;
 }
 
-.input-cl, .button-cl{
+.input-cl,
+.button-cl{
   outline:none;
 }
 
