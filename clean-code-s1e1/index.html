@@ -16,43 +16,43 @@
   </header>
 
   <main class="center-page">
-    <section class="add-item">
+    <section class="add-task">
       <label class="label-new-task" for="new-task">Add Item</label>
       <div class="task-row-wrapper">
-        <input id="new-task" class="task input-cl input-text" type="text">
-        <button class="button-cl">Add</button>
+        <input id="new-task" class="task input input-text" type="text">
+        <button class="btn">Add</button>
       </div>
     </section>
 
     <section class="todo">
       <h3 class="h3">Todo</h3>
-      <ul class="ul-cl" id="incomplete-tasks">
-        <li class="li-cl" >
-          <input class="input-cl li-input-checkbox" type="checkbox">
-          <label class="task li-label">Pay Bills</label>
-          <input type="text" class="task input-cl input-text li-input-text ">
-          <button class="edit button-cl">Edit</button>
-          <button class="delete button-cl"><img class="button-delete-img" src="./remove.svg" alt="button to delete task"></button>
+      <ul class="ul" id="incomplete-tasks">
+        <li class="ul__li">
+          <input class="input li__input_checkbox" type="checkbox">
+          <label class="task li__label">Pay Bills</label>
+          <input type="text" class="task input input-text li__input_text ">
+          <button class="edit btn">Edit</button>
+          <button class="delete btn"><img class="button__delete-img" src="./remove.svg" alt="button to delete task"></button>
         </li>
-        <li class="li-cl edit-mode">
-          <input  class="input-cl li-input-checkbox" type="checkbox">
-          <label class="task li-label ul-li-edit-mode-label">Go Shopping</label>
-          <input type="text" value="Go Shopping" class="task input-cl input-text li-input-text ul-li-edit-mode-input-text">
-          <button class="edit button-cl">Save</button>
-          <button class="delete button-cl"><img class="button-delete-img" src="./remove.svg" alt="button to delete task"></button>
+        <li class="ul__li edit-mode">
+          <input  class="input li__input_checkbox" type="checkbox">
+          <label class="task li__label ul__li_edit-mode-label">Go Shopping</label>
+          <input type="text" value="Go Shopping" class="task input input-text li__input_text ul__li_edit-mode-input-text">
+          <button class="edit btn">Save</button>
+          <button class="delete btn"><img class="button__delete-img" src="./remove.svg" alt="button to delete task"></button>
         </li>
       </ul>
     </section>
 
     <section class="completed">
       <h3 class="h3">Completed</h3>
-      <ul class="ul-cl" id="completed-tasks">
-        <li class="li-cl">
-          <input class="input-cl li-input-checkbox" type="checkbox" checked>
-          <label class="task li-label ul-completed-tasks-label">See the Doctor</label>
-          <input type="text" class="task input-cl input-text li-input-text">
-          <button class="edit button-cl">Edit</button>
-          <button class="delete button-cl"><img class="button-delete-img" src="./remove.svg" alt="button to delete task"></button>
+      <ul class="ul" id="completed-tasks">
+        <li class="ul__li">
+          <input class="input li__input_checkbox" type="checkbox" checked>
+          <label class="task li__label ul__completed-tasks_label">See the Doctor</label>
+          <input type="text" class="task input input-text li__input_text">
+          <button class="edit btn">Edit</button>
+          <button class="delete btn"><img class="button__delete-img" src="./remove.svg" alt="button to delete task"></button>
         </li>
        </ul>
     </section>
